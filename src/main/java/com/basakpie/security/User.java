@@ -10,7 +10,6 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by basakpie on 2017. 5. 11..
  */
 @Entity
 @EntityListeners(value = AuditingEntityListener.class)
