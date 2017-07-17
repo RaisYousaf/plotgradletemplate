@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.dexdev.models;
+package com.basakpie.models;
 
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 
 /**
@@ -18,21 +19,17 @@ import lombok.Data;
  */
 @Entity
 @Data
-
 public class Plot extends CommonEntity implements Serializable{
     
     private String name;
-    private String dimenstion;
+    private String dimension;
     private String location;
     private String address;
     private String type;
     private String marlas;
-    private long purchasepricepermarla;
-    private long totalprice;
-    private long saleprice;
-    
-    @OneToMany(mappedBy = "plot")
-    private List<Sale> sales;
-    
+    private double purchasePricePerMarla;
+    private double totalprice;
+    private double saleprice;
+   
     
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.dexdev.models;
+package com.basakpie.models;
 
 import java.io.Serializable;
 import java.util.List;
@@ -12,6 +12,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  *
@@ -20,7 +21,6 @@ import lombok.Data;
 
 @Entity
 @Data
-
 public class Account extends CommonEntity implements Serializable{
 
 private String title;
@@ -32,5 +32,5 @@ private Account account;
 
 @OneToMany(mappedBy = "account")
 private List<TransactionDetail> transactionDetails;
-    
+
 }

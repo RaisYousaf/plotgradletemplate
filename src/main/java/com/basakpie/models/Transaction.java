@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.dexdev.models;
+package com.basakpie.models;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -14,6 +14,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 
 /**
@@ -22,7 +23,6 @@ import lombok.Data;
  */
 @Entity
 @Data
-
 public class Transaction extends CommonEntity implements Serializable {
     
     private String title;
@@ -35,5 +35,5 @@ public class Transaction extends CommonEntity implements Serializable {
     
     @Temporal(TemporalType.TIMESTAMP)
     private Date date = new Date();
-    
+
 }

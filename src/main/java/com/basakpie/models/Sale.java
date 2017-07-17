@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.dexdev.models;
+package com.basakpie.models;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -14,6 +14,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  *
@@ -33,10 +34,4 @@ public class Sale extends CommonEntity implements Serializable {
     private long tokenMoney;
     private long amountPerInstallment;
     
-    @OneToMany(mappedBy = "sale")
-    private List<Transaction> transactions;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date date = new Date();
-
 }
