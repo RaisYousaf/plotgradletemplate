@@ -245,6 +245,7 @@ public class CustomerView extends AbstractView {
         add.setIcon(VaadinIcons.PLUS);
         add.addClickListener(e ->{
             try {
+                customer.setId(null);
             this.getUI().addWindow(window);
                 
             } catch (IllegalArgumentException ex) {
@@ -257,8 +258,16 @@ public class CustomerView extends AbstractView {
         update.addClickListener(e ->{
         if(!grid.getSelectedItems().isEmpty()){
             try {
-                customer=grid.asSingleSelect().getValue();
-                
+               customer=grid.asSingleSelect().getValue();
+                fullName.setValue(customer.getFullName());
+                fatherName.setValue(customer.getFatherName());
+                cnic.setValue(String.valueOf( customer.getCnic()));
+                description.setValue(customer.getDescription());
+                currentAddress.setValue(customer.getCurrentAddress());
+                permanentAddress.setValue(customer.getPermanentAddress());
+                email.setValue(customer.getEmail());
+                accountNo.setValue(String.valueOf(customer.getAccountNo()));
+                phoneNo.setValue(String.valueOf(customer.getPhoneNo()));
                 
                
             this.getUI().addWindow(window);
