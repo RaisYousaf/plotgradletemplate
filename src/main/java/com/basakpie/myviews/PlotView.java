@@ -165,6 +165,7 @@ public class PlotView extends AbstractView {
         save.setClickShortcut(KeyCode.ENTER);
         save.addClickListener((event) -> {
             try {
+                
                 binder.writeBean(plot);
 
             } catch (ValidationException ex) {
@@ -263,6 +264,7 @@ public class PlotView extends AbstractView {
         add_plot.setIcon(VaadinIcons.PLUS);
         add_plot.addClickListener(e ->{
             try {
+                plot.setId(null);
             this.getUI().addWindow(window);
                 
             } catch (IllegalArgumentException ex) {
@@ -275,17 +277,17 @@ public class PlotView extends AbstractView {
         update.addClickListener(e ->{
         if(!grid.getSelectedItems().isEmpty()){
             try {
-                Plot plot2=grid.asSingleSelect().getValue();
-                name.setValue(plot2.getName());
-                address.setValue(plot2.getAddress());
-                location.setValue(plot2.getLocation());
-                description.setValue(plot2.getDescription());
-                dimension.setValue(plot2.getDimension());
-                type.setValue(plot2.getType());
-                marlas.setValue(plot2.getMarlas());
-                purchasePricePerMarla.setValue(String.valueOf(plot2.getPurchasePricePerMarla()));
-                saleprice.setValue(String.valueOf(plot2.getSaleprice()));
-                totalprice.setValue(String.valueOf(plot2.getTotalprice()));
+                plot=grid.asSingleSelect().getValue();
+                name.setValue(plot.getName());
+                address.setValue(plot.getAddress());
+                location.setValue(plot.getLocation());
+                description.setValue(plot.getDescription());
+                dimension.setValue(plot.getDimension());
+                type.setValue(plot.getType());
+                marlas.setValue(plot.getMarlas());
+                purchasePricePerMarla.setValue(String.valueOf(plot.getPurchasePricePerMarla()));
+                saleprice.setValue(String.valueOf(plot.getSaleprice()));
+                totalprice.setValue(String.valueOf(plot                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 .getTotalprice()));
                 
                
             this.getUI().addWindow(window);
