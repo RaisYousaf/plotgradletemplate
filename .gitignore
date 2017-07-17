@@ -39,3 +39,4 @@ hs_err_pid*
 
 # Project Test Files #
 **/src/main/webapp/VAADIN/widgetsets
+/.nb-gradle/

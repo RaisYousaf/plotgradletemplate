@@ -68,7 +68,7 @@ public class VaadinSideBar extends CustomComponent {
         final CssLayout layout = new CssLayout();
         layout.addStyleName(ValoTheme.MENU_PART);
 
-        final Label title = new Label("<h3>Vaadin <strong>Project</strong></h3>", ContentMode.HTML);
+        final Label title = new Label("<h3>DexDev <strong>Project</strong></h3>", ContentMode.HTML);
         title.setSizeUndefined();
 
         final HorizontalLayout top = new HorizontalLayout();

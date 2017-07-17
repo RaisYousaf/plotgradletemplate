@@ -13,7 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import java.util.Arrays;
 
 /**
- * Created by basakpie on 2017-05-15.
+ * Created by  on 2017-05-15.
  */
 @SpringBootApplication(exclude = org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration.class)
 public class Application implements CommandLineRunner {
