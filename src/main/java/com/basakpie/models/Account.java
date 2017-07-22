@@ -21,6 +21,7 @@ import lombok.EqualsAndHashCode;
 
 @Entity
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class Account extends CommonEntity implements Serializable{
 
 private String title;

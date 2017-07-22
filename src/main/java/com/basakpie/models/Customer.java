@@ -19,6 +19,7 @@ import lombok.EqualsAndHashCode;
  */
 @Entity
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class Customer extends CommonEntity implements Serializable{
     
     private String fullName;
