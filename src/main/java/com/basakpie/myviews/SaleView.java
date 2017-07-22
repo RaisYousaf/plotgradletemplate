@@ -182,6 +182,7 @@ public class SaleView extends AbstractView {
 //        });
 //        
 
+
 ///Binder for data get/
         sale = new Sale();
         plot = new Plot();

@@ -6,15 +6,9 @@
 package com.basakpie.models;
 
 import java.io.Serializable;
-import java.util.Date;
-import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 /**
  *
@@ -28,6 +22,7 @@ public class Sale extends CommonEntity implements Serializable {
     
     @ManyToOne
     private Plot plot;
+    
     private long salePricePerMarla;
     private int numberOfInstallment;
     private long advance;
