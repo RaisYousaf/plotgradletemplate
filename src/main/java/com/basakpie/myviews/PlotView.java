@@ -298,7 +298,8 @@ public class PlotView extends AbstractView {
         }else{
             Notification.show("Please First Select a Row to Update",Notification.Type.WARNING_MESSAGE);
         }
-        });
+});
+
         
         ///This horizental layout is for adding button on the top of grid..
         buttonlayout=new HorizontalLayout();
